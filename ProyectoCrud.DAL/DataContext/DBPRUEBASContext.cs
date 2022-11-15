@@ -23,7 +23,7 @@ namespace ProyectoCrud.DAL.DataContext
         {
             optionsBuilder.UseSqlServer("Server=(local); DataBase=CRUD;Integrated Security=true");
         }
-
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Contacto>(entity =>
