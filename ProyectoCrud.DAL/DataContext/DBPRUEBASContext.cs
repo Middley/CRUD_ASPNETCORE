@@ -19,11 +19,13 @@ namespace ProyectoCrud.DAL.DataContext
 
         public virtual DbSet<Contacto> Contactos { get; set; } = null!;
 
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=(local); DataBase=CRUD;Integrated Security=true");
         }
         
+        //creación de los modelos 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Contacto>(entity =>
